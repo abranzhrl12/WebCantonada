@@ -1,0 +1,15 @@
+.popular{
+    width: 100%;
+    height: 53rem;
+    background: #000000;
+
+   &__background{
+    width: 100%;
+    height: 100%;
+    padding: 3rem 0;
+    background-image: url(../../../Assets/Icons/Mask\ group.svg);
+   }
+   &__img{
+    margin: 0 auto;
+   }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "webcantonada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "sass": "sass --watch src/sass/app.scss:public/Styles/styles.css  --style compressed"
+  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
