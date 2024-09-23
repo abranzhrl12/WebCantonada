@@ -1,21 +1,33 @@
 .card{
-    width: 23.7rem;
-    height: 33.6rem;
+    // width: 23.7rem;
+    // height: 33.6rem;
+    width: 19.1rem;
+    height: auto;
+    padding-bottom: 2rem;
+    overflow: hidden;
     border-radius: .8rem;
     margin-bottom: 5rem;
     flex-shrink: 0;
-    &__img{
+    &__figure{
+        flex-shrink: 0;
+        display: block;
         width: 100%;
-        height: 19rem;
+        max-height: 15.3rem;
         border-top-right-radius: .8rem;
         border-top-left-radius: .8rem;
         object-fit: cover;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
         filter: brightness(70%);
-     
+        aspect-ratio: 16/9;
     }
-  
+    &__img{
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/9;
+    }
     &__info{
+      
         background-color: white;
         clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
         padding: 2rem 2rem 3.5rem 2rem;
@@ -54,9 +66,8 @@
        
     }
     &__arrow-next{
-        top: 47%;
-        right: 1rem;
-       
         position: absolute;
+        top: 50%;
+        right: 1%;  
     }
 }
