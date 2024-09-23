@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper con Flechas de Navegación</title>
+    <style>
+        .swiper-button-prev, .swiper-button-next {
+            background-color: rgba(0, 0, 0, 0.5); /* Color de fondo */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Hacerlas redondas */
+            color: white; /* Color del icono */
+        }
+
+        .swiper-button-prev::after, .swiper-button-next::after {
+            font-size: 20px;
+            content: ''; /* Quitar el contenido por defecto */
+        }
+
+        .swiper-wrapper {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container mySwiper2">
+        <div class="swiper-wrapper">
+            <div class="card">
+                <img class="card__img" src="/Assets/img/img1popular.png" alt="" />
+                <div class="card__info">
+                    <h2 class="card__title">Chiken roll</h2>
+                    <p class="card__paragraph">Relleno de pollo queso crema y palta cubierto de sesamo</p>
+                    <p class="card__price">S/ 24</p>
+                </div>
+                <button class="card__btn">AGREGAR</button>
+            </div>
+            <!-- Repite el contenido de la tarjeta según lo necesario -->
+        </div>
+        <div class="swiper-pagination"></div>
+
+        <!-- Flechas de navegación -->
+        <div class="swiper-button-prev" style="display: none;"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Función para obtener el número de tarjetas visibles
+        function getSlidesPerView() {
+            const width = window.innerWidth;
+            let number;
+
+            if (width >= 1024) { // Escritorio
+                number = 4;
+            } else if (width >= 768) { // Tableta
+                number = 3;
+            } else { // Móvil
+                number = 2;
+            }
+
+            return number;
+        }
+
+        // Función para inicializar o actualizar Swiper
+        function initSwiper() {
+            // Destruir Swiper si ya existe
+            if (window.swiper) {
+                window.swiper.destroy();
+            }
+
+            // Obtener el número de slides visibles según el tamaño de la pantalla
+            let number = getSlidesPerView();
+
+            // Inicializar Swiper con las nuevas opciones
+            window.swiper = new Swiper('.mySwiper2', {
+                slidesPerView: number,
+                spaceBetween: 15,
+                freeMode: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next', // Flecha hacia adelante
+                    prevEl: '.swiper-button-prev', // Flecha hacia atrás
+                },
+                on: {
+                    // Ejecutar al cambiar de slide
+                    slideChange: function () {
+                        handleNavigationVisibility(this);
+                    },
+                    // Ejecutar al inicializar
+                    init: function () {
+                        handleNavigationVisibility(this);
+                    },
+                },
+            });
+        }
+
+        // Función para mostrar/ocultar las flechas de navegación
+        function handleNavigationVisibility(swiper) {
+            const prevButton = document.querySelector('.swiper-button-prev');
+            const nextButton = document.querySelector('.swiper-button-next');
+
+            if (swiper.isBeginning) {
+                prevButton.style.display = 'none'; // Oculta la flecha hacia atrás si está al inicio
+            } else {
+                prevButton.style.display = 'block'; // Muestra la flecha hacia atrás
+            }
+
+            if (swiper.isEnd) {
+                nextButton.style.display = 'none'; // Oculta la flecha hacia adelante si está al final
+            } else {
+                nextButton.style.display = 'block'; // Muestra la flecha hacia adelante
+            }
+        }
+
+        // Inicializar Swiper cuando el contenido esté listo
+        document.addEventListener('DOMContentLoaded', initSwiper);
+
+        // Actualizar Swiper cuando se cambia el tamaño de la ventana
+        window.addEventListener('resize', initSwiper);
+    </script>
+</body>
+</html>
