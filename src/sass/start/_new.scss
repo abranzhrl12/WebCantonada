@@ -38,10 +38,11 @@
     }
     &__title{
         margin-top: 1rem;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         text-wrap: nowrap;
         text-align: center;
-        letter-spacing: .1rem;
+     
+        font-family: var(--font-dela-gothic);
     }
     &__title-two{
         width: fit-content;

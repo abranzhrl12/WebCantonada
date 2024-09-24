@@ -1,9 +1,84 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+@font-face {
+  font-family: 'Dela Gothic One';
+  src: url('/Assets/font/Dela_Gothic_One/DelaGothicOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangNormal';
+  src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangLigh';
+  src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangmediun';
+  src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Medium.ttf') format('truetype');
+  font-weight: 500;  /* Medium es generalmente 500 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangBold';
+  src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Bold.ttf') format('truetype');
+  font-weight: bold;  /* 700 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PingFangExtraBold';
+  src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Heavy.ttf') format('truetype');
+  font-weight: 800;  /* Heavy es generalmente 800 */
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'PingFang';
+//   src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang ExtraLight.ttf') format('truetype');
+//   font-weight: 200;  /* ExtraLight es generalmente 200 */
+//   font-style: normal;
+// }
+
+
+@font-face {
+  font-family: 'SyncopateRegular';
+  src: url('/Assets/font/Syncopate/Syncopate-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SyncopateBold';
+  src: url('/Assets/font/Syncopate/Syncopate-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+
 
 :root{
     --primary-font: "Open Sans";
-    --primary-Color:#071435;
+    --font-dela-gothic: "Dela Gothic One"; /* Fuente Dela Gothic */
+    --font-pingfang-regular: "PingFangNormal", sans-serif; /* PingFang Regular */
+    --font-pingfang-light: "PingFangLigh", sans-serif; /* PingFang Light */
+    --font-pingfang-medium: "PingFangmediun", sans-serif; /* PingFang Medium */
+    --font-pingfang-bold: "PingFangBold", sans-serif; /* PingFang Bold */
+    --font-pingfang-extrabold: "PingFangExtraBold", sans-serif; /* PingFang Heavy */
+    // --font-pingfang-extralight: "PingFang", sans-serif; /* PingFang ExtraLight */
+    --font-syncopate-regular: "SyncopateRegular", sans-serif; /* Syncopate Regular */
+    --font-syncopate-bold: "SyncopateBold", sans-serif; /* Syncopate Bold */
     --background-Color:#0C2B82;
     --radius-Login: 2rem;
     --shadow-Login:0 6px 12px rgba(58, 58, 58, 0.15);
@@ -26,6 +101,7 @@ html {
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
+    letter-spacing: 0.5px;
    
   }
   [class*="__container"] {
@@ -40,7 +116,7 @@ html {
   //   height: auto;
   // }
   body {
-    font-family: var(--primary-font);
+  
     font-size: 1.6rem;
     line-height: 1.6;
      min-height: auto;

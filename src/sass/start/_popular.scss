@@ -12,7 +12,10 @@
     background-image: url(../../../Assets/Icons/Mask\ group.svg);
   
    }
-  
+   &__container{
+    width: 100%;
+    max-width: 120rem;
+   }
    &__img{
     display: block;
     margin: 0 auto;
@@ -30,10 +33,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: var(--font-pingfang-regular);
+
    }
 &__slider-container{
     max-width: 100vw;
     position: relative;
+    margin-left: 2rem;
 
 }
    &__slider{
@@ -59,15 +65,17 @@
     font-size: 1.7rem;
     text-align: center;
     position: relative;
-    
+    font-family: var(--font-dela-gothic);
     &::after{
         content: "";
         display: block;
-        width: 65%;
+        width: 100%;
         height: .1rem;
         background-color: rgb(255, 255, 255);
         margin: 0.5rem auto;
+       
     }
    }
 
 }
+
