@@ -1,5 +1,14 @@
 .navbar{
-  
+    width: 25rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: rgb(36, 36, 181);
+
+  animation: menuside 1s forwards;
+  display: none;
  
     &__list{
         
@@ -8,4 +17,20 @@
     &__check{
         display: none;
     }
+}
+
+@keyframes menuside{
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+#navbarhidden:not(:checked){
+    display: none;
+}
+#navbarhidden:checked + .navbar{
+    display: block;
 }

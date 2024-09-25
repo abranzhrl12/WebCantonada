@@ -1,4 +1,191 @@
 .footer{
-    background: linear-gradient(180deg, #000000 76%, rgba(0, 0, 0, 0.3) 100%);
+    width: 100%;
+    height: 96.9rem;
+    position: relative;
+    background: linear-gradient(180deg, #000 76%, rgba(0, 0, 0, 0.3) 100%);
+  
+   &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #000 76%, rgba(0, 0, 0, 0.3) 100%);
+    background-repeat: no-repeat;
+    z-index: 2;
+    pointer-events: none;
+   }
+    padding: 9rem 0 2rem 0;
+    &__container{
+        width: 92%;
+        position: relative;
+        z-index: 10;
+       
+    }
+&__content-list{
+    display: flex;
+    gap: 1.3rem;
+    
+}
+&__images-content{
+    transform: scale(.8);
+}
+&__networks{
+    display: flex;
+    margin-top: 4rem;
+    
+    gap: 1rem;
+}
+&__images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+&__list{
+    display: flex;
+    flex-direction: column;
+   
+    gap: 2rem;
+}
+&__list-title{
+    font-family: var(--font-syncopate-bold);
+    font-size: 1.4rem;
+   
+}
+&__list-subtitle{
+  font-family: var(--font-pingfang-regular);  
+  padding-left: 2rem;
+}
+&__span{
+    font-size: 1.1rem;
+    font-family: var(--font-pingfang-regular);  
+    padding-left: 2rem;
+}
+&__imgbook{
 
+    
+    transform: scale(.7);
+    margin-left: -3rem;
+}
+&__newsletter{
+    margin-top: 7rem;
+    display: grid;
+    gap: 1rem;
+}
+&__newsletter-title{
+    font-family: var(--font-syncopate-bold);
+    text-align: center;
+    
+}
+&__newsletter-paragraph{
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: var(--font-pingfang-regular); 
+}
+&__newsletter-input{
+    display: block;
+    width: 100%;
+    height: 5rem;
+    // border: .1rem solid white;
+    background-color: transparent;
+    border-radius: .4rem;
+    padding: 0 2rem;
+    color: #F3EBE2;
+    font-family: var(--font-pingfang-regular); 
+    &::placeholder{
+        color: #F3EBE2;
+    }
+  
+}
+&__content-input{
+    border: 1px solid white;
+    border-radius: .4rem;
+    display: flex;
+    color: #F3EBE2;
+  
+}
+&__divarrow{
+    background-color: white;
+    width: 5.1rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -5rem;
+    
+}
+&__checkTerminates{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: var(--font-pingfang-regular); 
+    cursor: pointer;
+    padding-left: .5rem;
+}
+&__checkInput{
+    display: none;
+}
+&__checkBox{
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 4px; /* Opcional: esquinas redondeadas */
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    position: relative;
+}
+&__checkInput:checked + .footer__checkBox{
+    background-color: white;
+    border-color: white;
+}
+&__checkInput:checked + .footer__checkBox::after{
+    content: '';
+    position: absolute;
+    top: 0.3rem;
+    left: 0.5rem;
+    width: 0.4rem;
+    height: 0.8rem;
+    border: solid black;
+    border-width: 0 0.2rem 0.2rem 0;
+    transform: rotate(45deg);
+}
+&__checkText{
+   font-size: 1.3rem;
+    color: white; /* Cambia el color según tu diseño */
+}
+&__payments{
+    display: block;
+    margin-top: 3rem;
+    width: 100%;
+     height : calc(96.9rem - 74.5rem);
+  /* Fondo con degradado */
+  background: url(/Assets/img/backgroundNovedades.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  
+   
+}
+&__payments-cards{
+    display: flex;
+    gap: 2rem;
+    z-index: 50;
+}
+&__payments-title{
+    color: white;
+    font-family: var(--font-syncopate-bold);
+    z-index: 50;
+}
+&__copy{
+    z-index: 50;
+    font-family: var(--font-pingfang-regular); 
+}
 }
