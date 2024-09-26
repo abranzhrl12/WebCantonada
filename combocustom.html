@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="combo/combo.js" defer></script>
+    <style>
+        /* Los estilos permanecen igual */
+        html {
+          scroll-behavior: smooth;
+          font-size: 62.5%;
+          box-sizing: border-box;
+        }
+        * {
+          box-sizing: inherit;
+          margin: 0;
+          padding: 0;
+          -webkit-tap-highlight-color: transparent;
+          user-select: none;
+        }
+       
+        body{
+          font-family: sans-serif;
+          font-size: 1.6rem;
+          line-height: 1.6;
+          min-height: 200vh;
+        }
+  
+
+        .comboCustom {
+            width: 22rem;
+            height: 4.2rem;
+            background-color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: .5rem;
+            position: relative;
+           
+        }
+        .select{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;   
+            cursor: pointer;         
+        }
+        .select__text{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            opacity: 1;
+           
+        }
+        .select__option{
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            margin-top: 0.5rem;
+            background-color: white;
+            box-shadow: -4px -2px 16px 0px #ffffffe7,
+            4px 2px 16px 0px rgb(95 157 231 / 48%), 0px 0px 20px 10px #00000008,
+            inset 5px 5px 20px rgba(0, 0, 0, 0.042),
+            inset -5px -5px 20px rgba(255, 255, 255, 0.626);
+            border-radius: .5rem;
+            max-height: 0;
+            visibility: hidden;
+            opacity: 0;
+            /* overflow: hidden; */
+            overflow-y: auto;
+           scrollbar-width: thin;
+           scrollbar-color: blue white;
+           scrollbar-gutter: stable both-edges;
+            transition: max-height .25s ease-in, visibility .8s ease , opacity  .4s ease;
+        }
+        .select__option-Item{
+            padding: 0.8rem 0 0.8rem 2rem;
+            cursor: pointer;
+            &:hover{
+                color: blue;
+            }
+        }
+        .select__option.active{
+            max-height: 12.5rem;  
+            visibility: visible;
+            opacity: 1;
+        
+        }
+      
+       
+        .select__span.fade{
+           opacity: 0;
+           transition: opacity 0.2s ease;
+        }
+        .select__span.active{
+            
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="comboCustom">
+        <div class="select">
+            <div class="select__text">
+                <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.08333 0C3.17291 0 0 2.87993 0 6.42857C0 12.1429 7.08333 20 7.08333 20C7.08333 20 14.1667 12.1429 14.1667 6.42857C14.1667 2.87993 10.9938 0 7.08333 0ZM7.08333 10C6.52295 10 5.97517 9.83244 5.50923 9.5185C5.04329 9.20459 4.68014 8.75829 4.46566 8.23622C4.25122 7.71416 4.19506 7.13967 4.30443 6.58542C4.41376 6.03121 4.68364 5.52215 5.07985 5.12253C5.47613 4.723 5.98095 4.45085 6.53054 4.34065C7.08017 4.23036 7.64987 4.28695 8.16759 4.50319C8.68531 4.71947 9.12785 5.08567 9.43913 5.55553C9.75051 6.02538 9.91667 6.57776 9.91667 7.14286C9.91582 7.90038 9.6171 8.62662 9.08589 9.16224C8.55473 9.69792 7.83455 9.99915 7.08333 10Z" fill="#2473A6"/>
+                </svg>           
+              <span class="select__span">Tipo de Entrega</span>  
+            </div>
+            <svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.16699 8.5L0.506737 0.25L17.8272 0.250002L9.16699 8.5Z" fill="#2473A6"/>
+            </svg>
+        </div>
+        <ul class="select__option"></ul> <!-- Lista de opciones generada dinámicamente -->
+    </div>
+
+</body>
+</html>
