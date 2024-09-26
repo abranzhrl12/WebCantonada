@@ -1,7 +1,11 @@
+@use '../global/mixins' as m;
+
 .news{
     background-color: white;
     padding: 1rem;
-    
+    @include m.tablet {
+        height: auto;
+    }
     &__background{
         width: 100%;
         height: 80rem;
@@ -29,6 +33,9 @@
         width: 50%;
         margin-top: -6rem;
         margin-left: 2.5rem;
+        @include m.tablet {
+            width: 24.8rem;
+        }
       
     }
     &__icon-secondary{
@@ -56,6 +63,7 @@
     }
     &__categories__slider{
         display: flex;
+        background-color: red;
     }
 
     

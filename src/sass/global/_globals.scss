@@ -129,4 +129,20 @@ html {
     width: 100%;
     height: 0.6rem;
     background-color: white;
+    &--small{
+      width: 200%;
+      margin-left: -2rem;
+      height: .1rem;
+      background-color: #F3EBE24D;
+    }
+  }
+.iconred{
+  &__sprite{
+    width: 100%;
+    display: block;
+  }
+}
+  .iconred--ml{
+    width: 100%;
+    margin: 0;
   }

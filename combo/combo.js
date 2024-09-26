@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const opcionesCombo = ['Delivery', 'Reparto', 'Entrega', 'Nose']; // Array de opciones
+    const opcionesCombo = ['Delivery', 'Reparto', 'Entrega'] // Array de opciones
 
     const comboCustom = document.querySelector('.comboCustom');
     const select = comboCustom.querySelector('.comboCustom__select');
