@@ -5,7 +5,10 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   position: relative;
+  &--bg{
+    background-color: blue !important;
 
+  }
   &__select {
     width: 100%;
     height: 100%;

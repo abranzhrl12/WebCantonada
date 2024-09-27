@@ -44,6 +44,11 @@
         height: min-content;
         border-bottom: 0.1rem solid white;
     }
+    &__combos{
+        padding: 1rem 2rem;
+        display: flex;
+        gap: 3rem;
+    }
     &__menu-icons {
         width: fit-content;
         text-align: end;
