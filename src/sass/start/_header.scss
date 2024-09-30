@@ -22,6 +22,7 @@
         display: flex;
         justify-content: space-between;
     }
+  
     &__logowhite{
         transform: scale(.9);
         @include m.tablet {
@@ -44,25 +45,46 @@
         height: min-content;
         border-bottom: 0.1rem solid white;
     }
+    &__labelMenu{
+        display: flex;
+        align-items: center;
+    }
     &__combos{
+       
         padding: 1rem 2rem;
         display: flex;
         gap: 3rem;
+      
+         &--tablet{
+           
+            display: none;
+            @include m.tablet {
+                
+                display: flex;
+                
+            }
+        }
     }
+  
     &__menu-icons {
         width: fit-content;
         text-align: end;
         display: flex;
+        height: fit-content;
         gap: 2.5rem;
         margin-top: 1.1rem;
         margin-bottom: 1.3rem;
+  
     }
     &__menu-iconshop {
+        display: block;
         display: flex;
         align-items: center;
         gap: 0.6rem;
      &--movil{
             display: block;
+            display: flex;
+            align-items: center;
             @include m.tablet {
                 display: none;
             }
@@ -70,9 +92,19 @@
         &--tablet{
             display: none;
             @include m.tablet {
-                display: block;
-                display: flex;
+               display: flex;
             }
+        }
+    }
+    &__menu-iconUser{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    &__menu-iconUserspan{
+        display: none;
+        @include m.tablet {
+            display: block;
         }
     }
     &__shopIcons{

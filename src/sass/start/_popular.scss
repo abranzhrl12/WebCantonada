@@ -17,11 +17,21 @@
     width: 100%;
     max-width: 120rem;
    }
+   &__figure{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // @include m.tablet {
+    //     width: 28.6rem;
+       
+    // }
+    
+   }
    &__img{
-    display: block;
-    margin: 0 auto;
+    margin-left: 3rem;
     @include m.tablet {
-        width: 28.6rem;
+        width: 28rem;
+        margin-left: 5rem;
     }
    }
    &__list{
@@ -35,6 +45,7 @@
         justify-content: space-evenly;
         font-size: 1.5rem;
         margin-bottom: 4rem;
+        padding: 0 4rem;
     }
    }
    &__li{

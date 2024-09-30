@@ -1,14 +1,16 @@
+@use  '../global/mixins' as m;
+
 .comboCustom {
   width: 22rem;
   height: 4.2rem;
-  background-color: white !important;
+  background-color: white ;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   position: relative;
-  &--bg{
-    background-color: blue !important;
-
-  }
+ &--bg{
+  background-color: #1B587E;
+ 
+ }
   &__select {
     width: 100%;
     height: 100%;
@@ -17,16 +19,26 @@
     align-items: center;
     padding: 0 1rem;
     cursor: pointer;
+   
   }
 
   &__text {
     display: flex;
     align-items: center;
     gap: 2rem;
-  
     opacity: 1;
     font-family: var(--font-pingfang-regular);
+  
+    
+  }
+  &__span{
     color: #2473A6;
+    &--bg{
+      color: white;
+    }
+  }
+  &__svg-path{
+    fill: #fff;
   }
 
   &__option {
@@ -54,6 +66,7 @@
       visibility 0.8s ease,
       opacity 0.4s ease;
       z-index: 200;
+   
   }
 
  
