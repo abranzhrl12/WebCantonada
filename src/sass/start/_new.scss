@@ -34,6 +34,7 @@
         margin-top: -6rem;
         margin-left: 2.5rem;
         @include m.tablet {
+            margin-top: -5rem;
             width: 24.8rem;
         }
       
@@ -42,6 +43,18 @@
         display: block;
         scale: .9;
         margin: -6rem auto 0 auto;
+        @include m.tablet {
+            width: 30.1rem;
+            ;
+        }
+    }
+    &__titles{
+        @include m.tablet {
+            margin-top: -20rem;
+            margin-left: 18%;
+            margin-bottom: 6rem;
+        }
+      
     }
     &__title{
         margin-top: 1rem;
@@ -50,21 +63,30 @@
         text-align: center;
      
         font-family: var(--font-dela-gothic);
+        @include m.tablet {
+            font-size: 1.6rem;
+        }
     }
     &__title-two{
+   
+       
         width: fit-content;
         text-wrap: nowrap;
         margin: 0 auto;
+        margin-top: 3.5rem;
         color: white;
         padding: 0 1rem 1rem 1rem;
         letter-spacing: .1rem;
-       
         border-bottom: .1rem solid white;
+        font-family: var(--font-dela-gothic);
+        @include m.tablet {
+            font-size: 2rem;
+        }
     }
     &__categories__slider{
         display: flex;
-        background-color: red;
+     
     }
-
+    
     
 }

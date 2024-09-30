@@ -32,6 +32,7 @@
         display: flex;
         gap: 0rem;
         overflow: scroll;
+        scrollbar-width: none;
         flex-shrink: 0;
     }
     &__card {
