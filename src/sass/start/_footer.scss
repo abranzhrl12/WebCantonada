@@ -1,9 +1,14 @@
+@use '../global/' as m;
 .footer{
     width: 100%;
-    height: 96.9rem;
+    height: 96rem;
     position: relative;
     background: linear-gradient(180deg, #000 76%, rgba(0, 0, 0, 0.3) 100%);
-  
+    overflow: hidden;
+    @include m.tablet {
+        height: auto;
+    }
+   
    &::after{
     content: "";
     display: block;
@@ -16,6 +21,11 @@
     background-repeat: no-repeat;
     z-index: 2;
     pointer-events: none;
+    @include m.tablet {
+        background: linear-gradient(90deg, #000 85%, rgba(0, 0, 0, 0.3) 100%) ,url(/Assets/img/backgroundNovedades.webp);
+        background-position: right center; /* Ajusta la posición de la imagen */
+        background-size: cover;
+    }
    }
     padding: 9rem 0 2rem 0;
     &__container{
@@ -24,9 +34,33 @@
         z-index: 10;
        
     }
+    &__grid {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-areas: 
+            'images list'
+            'newsletter newsletter';
+        grid-template-columns: repeat(2,1fr); /* Dos columnas con tamaños iguales */
+        grid-template-rows: auto auto;    /* Dos filas con tamaños iguales */
+        @include m.tablet {
+          
+            grid-template-areas: 
+            'images list'
+            'images newsletter'; /* Cambia la disposición en tablets */
+         grid-template-columns: 15rem 1fr; /* Mantén dos columnas iguales */
+         grid-template-rows: repeat(2, 1fr);    /* Mantén dos filas iguales */
+         row-gap: 2rem;
+         place-content: center;
+         place-items: end;
+        }
+    }
 &__content-list{
     display: flex;
     gap: 1.3rem;
+    @include m.tablet {
+        justify-content: space-between;
+    }
     
 }
 &__images-content{
@@ -42,16 +76,41 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    grid-area: images;
 }
 &__list{
     display: flex;
     flex-direction: column;
    
     gap: 2rem;
+    grid-area: list;
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    &::after{
+        display: none;
+        content: "";
+        width: 100%;
+        height: .1rem;
+        background-color: #F3EBE24D;
+       
+        position: absolute;
+        bottom: -2rem;
+        @include m.tablet {
+            display: block;
+        }
+      
+    }
 }
 &__list-title{
     font-family: var(--font-syncopate-bold);
     font-size: 1.4rem;
+   
    
 }
 &__list-subtitle{
@@ -64,15 +123,22 @@
     padding-left: 2rem;
 }
 &__imgbook{
+width: 11.6rem;
+@include m.tablet {
+    width: 14.2rem;
+}
+    // margin-top: 10rem;
 
-    
-    transform: scale(.7);
-    margin-left: -3rem;
 }
 &__newsletter{
     margin-top: 7rem;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+    grid-area: newsletter;
+    @include m.tablet {
+     margin: 0;
+    }
 }
 &__newsletter-title{
     font-family: var(--font-syncopate-bold);
@@ -102,6 +168,7 @@
 }
 &__content-input{
     border: 1px solid white;
+    height: 5rem;
     border-radius: .4rem;
     display: flex;
     color: #F3EBE2;
@@ -161,9 +228,10 @@
     display: block;
     margin-top: 3rem;
     width: 100%;
-     height : calc(96.9rem - 74.5rem);
+     height : calc(96.9rem - 74rem);
   /* Fondo con degradado */
   background: url(/Assets/img/backgroundNovedades.webp);
+  
   background-repeat: no-repeat;
   background-position: left center;
   display: flex;
@@ -171,6 +239,12 @@
   justify-content: center;
   align-items: center;
   gap: 3.5rem;
+  @include m.tablet {
+
+    height: auto;
+    background: #000;
+  }
+  
   
    
 }
