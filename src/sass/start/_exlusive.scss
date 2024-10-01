@@ -8,6 +8,10 @@
         display: flex;
         height: 33.5rem;
         gap: 1rem;
+
+    }
+    @include m.desktop {
+        height: 55.5rem;
     }
     &__oneImg{
         width: 100%;
@@ -22,6 +26,9 @@
            width: 60%;
             height: auto;
             clip-path: polygon(0 0, 76% 0, 100% 100%, 0% 100%);
+        }
+        @include m.desktop {
+            height: 100%;
         }
 
     }
@@ -41,6 +48,11 @@
             height: auto;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 27.4% 100%);
             background-position: center;
+        }
+        @include m.desktop {
+            width: 54%;
+            height: 100%;
+           
         }
     }
     &__oneIcon{

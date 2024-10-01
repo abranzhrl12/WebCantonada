@@ -9,9 +9,15 @@
     border-radius: .8rem;
     margin-bottom: 2rem;
     flex-shrink: 0;
+    &:nth-child(1){
+  @include m.tablet {
+    margin-left: 2.5rem;
+  }
+       
+    }
     @include m.tablet {
-        width: 23.7rem;
-        height: 35rem;
+        width: 24.5rem;
+        height: 35.2rem;
     }
     &__figure{
         flex-shrink: 0;
@@ -89,6 +95,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         &::after{
             content: "AGREGAR";
             position: absolute;

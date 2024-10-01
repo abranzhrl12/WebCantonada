@@ -15,7 +15,16 @@
     flex-direction: column;
     justify-content: space-between;
     display: none;
-   
+   @include m.desktop {
+    width: 100%;
+    display: block;
+    position: static;
+    background-color: transparent;
+    display: flex;
+    height: inherit;
+    padding-top: 1.2rem;
+    animation: none;
+   }
     &::after{
         content: "";
         width: 100%;
@@ -27,13 +36,18 @@
         border-top-left-radius: .6rem;
         border-bottom-left-radius: .6rem;
         background: linear-gradient(0deg, rgba(36,115,166,0) 0%, #2573a7cc 18%, rgba(36,115,166,1) 28%);
-        
+        @include m.desktop {
+            display: none;
+        }
     }
     &__content-close{
         margin: 2rem 0;
         display: block;
         display: flex;
         justify-content: flex-end;
+        @include m.desktop {
+            display: none;
+        }
     }
     &__items{
         padding: 0 2rem;
@@ -41,6 +55,9 @@
         scale: .95;
         @include m.telefonom {
             scale: 1;
+        }
+        @include m.desktop {
+            padding: 0;
         }
         
     }
@@ -58,10 +75,16 @@
         width: 100%;
         mask-image: linear-gradient( transparent, #2573a7cc 16%,);
         object-fit: cover;
+        @include m.desktop {
+            display: none;
+        }
     }
     &__contentTwo{
         width: 100%;
         margin: 2rem 0;
+        @include m.desktop {
+            display: none;
+        }
 
         
     }
@@ -70,6 +93,14 @@
        display: flex;
        flex-direction: column;
        gap: 1rem;
+       @include m.desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: max-content;
+        margin: 0;
+        gap: 0.5rem;
+       }
     }
 
     &__list-li{
@@ -113,6 +144,11 @@
             @include m.tablet {
                 display: block;
             }
+            @include m.desktop {
+                width: 25rem;
+                margin: 0;
+            }
+            
         }
     }
 }
@@ -123,8 +159,21 @@
     height: auto;
     display: flex;
     justify-content: space-between;
-   
-    
+   li{
+    cursor: pointer;
+   }
+    &--nav{
+       display: none;
+       @include m.desktop {
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        gap: 2rem;
+        padding: 0 2rem;
+        margin-right: 2rem;
+       }
+       
+    }
 }
 
 @keyframes menuside {

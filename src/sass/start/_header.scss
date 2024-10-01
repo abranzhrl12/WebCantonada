@@ -6,11 +6,14 @@
     height: 50rem;
     background-image: url(../../../Assets/img/fondo_sec_movil2.webp);
     background-size: cover;
-    
+   
     background-position: center center;
     padding: 2rem 0;
     @include m.tablet {
         height: 70.8rem;
+    }
+    @include m.desktop {
+        min-height: 100vh;
     }
     &__container {
         height: 75%;
@@ -35,6 +38,10 @@
         @include m.tablet {
             width: 100%;
         }
+        @include m.desktop {
+            width: 90%;
+        }
+       
     }
 
     &__menu {
@@ -48,6 +55,9 @@
     &__labelMenu{
         display: flex;
         align-items: center;
+        @include m.desktop {
+            display: none;
+        }
     }
     &__combos{
        
@@ -74,6 +84,7 @@
         gap: 2.5rem;
         margin-top: 1.1rem;
         margin-bottom: 1.3rem;
+        font-family: var(--font-pingfang-regular);
   
     }
     &__menu-iconshop {
@@ -88,11 +99,19 @@
             @include m.tablet {
                 display: none;
             }
+            @include m.desktop {
+                display: block;
+                display: flex;
+            }
+          
         }
         &--tablet{
             display: none;
             @include m.tablet {
                display: flex;
+            }
+            @include m.desktop {
+                display: none;
             }
         }
     }
@@ -114,7 +133,15 @@
         display: flex;
         justify-content: flex-end;
         gap: 1rem;
-       
+        @include m.desktop {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          
+        }
+           
     }
     &__content-text {
         margin: 0 auto;
@@ -192,12 +219,28 @@
         margin-top: -13rem;
         gap: 5rem;
       }
+      @include m.desktop {
+        flex-direction: column;
+        justify-content: center;
+      }
    
     }
     &__IocnWhatssap{
         width: 3rem;
         @include m.tablet {
             width: 4.5rem;
+        }
+        @include m.desktop {
+           position: fixed;
+           right: 3rem;
+           bottom: 3rem;
+           z-index: 100;
+           cursor: pointer;
+           &:hover{
+            transition: transform .2s ease;
+            transform: scale(1.1);
+            filter: drop-shadow(5px 5px 10px rgb(55, 146, 164));
+           }
         }
     }
     &__sprite {
@@ -226,5 +269,20 @@
         text-wrap: nowrap;
       
         font-family: var(--font-dela-gothic);
+        @include m.desktop {
+          display: block;
+          
+        }
+
+    }
+   
+    @include m.desktop {
+
+        display: block;
+        position: relative;
+       margin-left: auto;
+       margin-top: 1.2rem;
+        
     }
 }
+

@@ -85,7 +85,7 @@
         background-color: transparent;
         position: relative;
         font-family: var(--font-dela-gothic);
-      
+        cursor: pointer;
         &::after{
             position: absolute;
             display: block;
