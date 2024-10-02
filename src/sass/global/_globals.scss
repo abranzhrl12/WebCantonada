@@ -15,12 +15,12 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'PingFangLigh';
-  src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
+// @font-face {
+//   font-family: 'PingFangLigh';
+//   src: url('/Assets/font/PingFang-Fonts-master/PingFang-Fonts-master/PingFang Light.ttf') format('truetype');
+//   font-weight: 300;
+//   font-style: normal;
+// }
 
 @font-face {
   font-family: 'PingFangmediun';
@@ -73,7 +73,6 @@
     --primary-font: "Open Sans";
     --font-dela-gothic: "Dela Gothic One"; /* Fuente Dela Gothic */
     --font-pingfang-regular: "PingFangNormal", sans-serif; /* PingFang Regular */
-    --font-pingfang-light: "PingFangLigh", sans-serif; /* PingFang Light */
     --font-pingfang-medium: "PingFangmediun", sans-serif; /* PingFang Medium */
     --font-pingfang-bold: "PingFangBold", sans-serif; /* PingFang Bold */
     --font-pingfang-extrabold: "PingFangExtraBold", sans-serif; /* PingFang Heavy */

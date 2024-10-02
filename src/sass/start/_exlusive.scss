@@ -21,7 +21,7 @@
         background-position: center;
         clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
         position: relative;
-        filter: brightness(90%);
+        filter: brightness(80%);
         @include m.tablet {
            width: 60%;
             height: auto;
@@ -40,7 +40,7 @@
         clip-path: polygon(0% 41%, 100% 0, 100% 100%, 0 100%);
         margin-top: -15.5rem;
         position: relative;
-        filter: brightness(90%);
+        filter: brightness(80%);
         @include m.tablet {
             width: 53%;   
             margin-left: -14.4%;
@@ -87,10 +87,24 @@
         position: absolute;
         top: 60%;
         left: 25%;
+        width: 19rem;
+        height: 8.5rem;
+        
+        background-image: url(/Assets/Icons/IconCocteles.svg);
+        background-image: cover;
+        background-repeat: no-repeat;
        @include m.tablet {
         scale: .85;
         top: 55%;
         left: 40%;
+       }
+       @include m.desktop {
+        width: 35rem;
+        height: 9rem;
+        background-image: url(/Assets/Icons/btnExclusive.svg);
+        background-image: cover;
+       
+       
        }
     }
  
@@ -99,6 +113,10 @@
         position: absolute;
         bottom: 8%;
         left: 35%;
+        @include m.desktop {
+            top: 75%;
+            left: 55%;
+        }
         
     }
     

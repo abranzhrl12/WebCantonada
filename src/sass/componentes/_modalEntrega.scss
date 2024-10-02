@@ -1,0 +1,100 @@
+.modal-entrega{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.838);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+   
+    z-index: 350;
+    &__container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        width: 90%;
+        height: 48.2rem;
+        max-width: 48.2rem;
+        max-height: 37.7rem;
+        //background-image: url(/Assets/img/backgroundNovedades.webp);
+        background-size: cover;
+        background: linear-gradient(0deg, rgba(0,0,0,0.3) 32%, rgba(0,0,0,0.8044467787114846) 69%, rgba(0,0,0,1) 100%),url(/Assets/img/backgroundNovedades.webp);
+        position: relative;
+        padding:  3rem;
+
+        
+        border-radius: .5rem;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        animation:modalresize .5s forwards;
+    }
+    
+    &__close-content{
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background-color: blue;
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .4rem;
+        img{
+            cursor: pointer;
+        }
+    }
+    &__title{
+        text-align: center;
+        text-wrap: balance;
+        font-family: var(--font-syncopate-bold);
+    }
+    &__paragraph{
+        text-wrap: balance;
+        text-align: center;
+        font-family: var(--font-pingfang-medium);
+    }
+    &__buttons{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        font-family: var(--font-dela-gothic);
+      
+    }
+    &__btn{
+        all: unset;
+        width: 100%;
+        height: 5.2rem;
+        display: block;
+        border: .1rem solid #2473A6;
+        border-radius: .5rem;
+        background-color: #ECF8FF;
+        color: #2473A6;
+        text-align: center;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 2rem;
+
+    }
+ 
+}
+
+@keyframes modalresize {
+ 0%{
+    transform: scale(.3);
+ }    
+ 100%{
+    transform: scale(1);
+ }
+}
+.modal-entrega.close{
+    display: none;
+}

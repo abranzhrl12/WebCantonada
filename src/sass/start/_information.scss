@@ -9,10 +9,20 @@
     @include m.tablet {
         background-position: 75% 25%;
     }
+    @include m.desktopFull {
+        height: 60rem;
+    }
     &__content-text{
         @include m.tablet {
          
             width: 65%;
+        }
+        @include m.desktop {
+            width: 45%;
+            margin-left: 5rem;
+            padding-top: 3rem;  
+         
+        
         }
         
     }
@@ -26,6 +36,11 @@
             text-wrap: wrap;
             width: 100%;
         }
+        @include m.desktop {
+            width: 80%;
+            font-size: 2rem;
+            text-wrap: wrap;
+        }
     }
     &__paragraph{
         width: 28.2rem;
@@ -35,6 +50,10 @@
         font-family: var(--font-pingfang-regular);
         @include m.tablet {
             width: 80%;
+        }
+        @include m.desktop {
+            width: 90%;
+            font-size: 1.4rem;
         }
     }
     &__img{
@@ -48,7 +67,10 @@
             top: 0;
             right: 0;
         }
-
+        @include m.desktop {
+            width: 66%;
+            margin-right: 3rem;
+        }
        }
     &__imgfood{
         display: block;
@@ -65,6 +87,9 @@
             position: absolute;
             bottom: -15%;
             left: 5%;
+        }
+        @include m.desktop {
+            bottom: -11%;
         }
     }
   
