@@ -7,30 +7,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   background-color: #dcdfe8;
+   background-color: #00000050;
+   position: fixed;
+   top: 0;
+   left: 0;
+   
+   display: none;
 }
 
 .login{
-width: 90%;
-max-width: 54.4rem;
-height: 60.8rem;
-border-radius: 1.2rem;
+width: 100%;
 
-box-shadow: -4px -2px 16px 0px #ffffffe7,
-4px 2px 16px 0px rgb(95 157 231 / 48%), 0px 0px 20px 10px #00000008,
-inset 5px 5px 20px rgba(0, 0, 0, 0.042),
-inset -5px -5px 20px rgba(255, 255, 255, 0.626);
+height: 100%;
+
+
+// box-shadow: -4px -2px 16px 0px #ffffffe7,
+// 4px 2px 16px 0px rgb(95 157 231 / 48%), 0px 0px 20px 10px #00000008,
+// inset 5px 5px 20px rgba(0, 0, 0, 0.042),
+// inset -5px -5px 20px rgba(255, 255, 255, 0.626);
+
 color: black;
-&__content{
-    padding: 1.5rem 4.5rem;
+background-color: white;
+
+@include m.tablet {
+    width: 90%;  
+    max-width: 49.5rem;
+    height: 60.8rem;
+    border-radius: 1.2rem;
+    margin: 0 auto;
 }
 @include m.desktop {
-    scale: .8;
+    height: 60.8rem;
+    scale: .7;
 }
 @include m.desktopFullHD {
     scale: 1;
 }
-background-color: white;
+&__content{
+    padding: 1.5rem 2.5rem;
+    @include m.tablet {
+        width: 100%;  
+        
+        padding: 1.5rem 4.5rem;
+    }
+}
+
+
 &__figure{
     position: relative;
 }
@@ -45,6 +67,7 @@ background-color: white;
     justify-content: center;
     align-items: center;
     border-radius: .4rem;
+    cursor: pointer;
 }
 
 &__img{
@@ -53,7 +76,8 @@ background-color: white;
     object-fit: cover;
     filter: brightness(110%);
     filter: grayscale(30%);
-    border-radius: 1.2rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
 }
 &__images{
     display: flex;
@@ -66,8 +90,19 @@ background-color: white;
     object-fit: cover;
 }
 &__iconFood{
-    margin-right: -8.5rem;
-    margin-bottom: -15rem;
+    
+    margin-right: -5.5rem;
+    scale: .7;
+    @include m.tablet {
+        margin-bottom: -15rem;
+        margin-right: -8.5rem;
+        scale: .9;
+    }
+    @include m.desktop {
+        margin-bottom: -16rem;
+        margin-right: -10.5rem;
+    
+    }
 }
 &__form{
     display: flex;
@@ -81,5 +116,102 @@ background-color: white;
 &__paragraph{
     width: 90%;
     font-family: var(--font-pingfang-medium);
+    line-height: 1.2;
 }
+&__content-input{
+    height: 5.2rem;
+}
+&__content-input{
+    width: 100%;
+    height: 5.2rem;
+    display: grid;
+    grid-template-areas: 'input'; /* Solo una área definida */
+grid-template-columns: 1fr;   /* Una columna que ocupa el 100% del espacio */
+grid-template-rows: 1fr;      /* Una fila que ocupa el 100% del espacio */
+grid-auto-flow: dense;        /* Mantiene el flujo compacto, pero no creará filas adicionales */
+align-items: center;
+}
+&__input{
+    display: block;
+    width: 100%;
+    height: 100%;
+    grid-area: input;
+    
+    border: .1rem solid gainsboro;
+    border-radius: .5rem;
+    outline: none;
+    padding: 0 2rem;
+    padding-top: 1.2rem;
+    font-size: 1.6rem;
+    background-color: #F9F9F9;
+    font-family: var(--font-pingfang-medium);
+    &:not(:placeholder-shown) + .login__span-input{
+        transform: translateY(-1.2rem);
+        font-size: 1.2rem;
+        
+    }
+    &:focus + .login__span-input{
+        transform: translateY(-1.2rem);
+        font-size: 1.2rem;
+    }
+    &:focus{
+        outline: .2rem solid #2473A6;
+    }
+}
+&__span-input{
+   display: block;
+   grid-area: input;
+   width: fit-content;
+   height: min-content;
+   display: flex;
+   align-items: center;
+   margin-left: 2rem;
+   z-index: 10;
+   pointer-events: none;
+   background-color: transparent;
+   transition: transform .3s;
+   color: #7C7C7C;
+   font-family: var(--font-pingfang-medium);
+   font-size: 1.7rem;
+   
+}
+&__restore{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-pingfang-medium);
+}
+&__remember{
+    display: flex;
+    gap: 0.7rem;
+    font-family: var(--font-pingfang-medium);
+}
+&__btn{
+    all: unset;
+    width: 100%;
+    height: 5.2rem;
+    background-color: #FF0000;
+    text-align: center;
+    border-radius: .6rem;
+    color: white;
+    font-family: var(--font-dela-gothic);
+    cursor: pointer;
+    margin-top: 1rem;
+}
+&__register-content{
+   text-align: center;
+   font-family: var(--font-pingfang-regular);
+}
+&__restore-link{
+    color: #2473A6;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: .6rem;
+}
+}
+
+.content-login.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 360;
 }

@@ -105,7 +105,7 @@
               </li>
             </ul>
             <div class="header__menu-icons">
-              <div class="header__menu-iconUser">
+              <div class="header__menu-iconUser " id="loggin">
                 <svg width="24" height="24" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M20.647 10C20.647 15.5228 16.1698 20 10.647 20C5.1241 20 0.646973 15.5228 0.646973 10C0.646973 4.47713 5.1241 0 10.647 0C16.1698 0 20.647 4.47713 20.647 10ZM13.647 7C13.647 8.65689 12.3039 10 10.647 10C8.99008 10 7.64697 8.65689 7.64697 7C7.64697 5.34311 8.99008 4 10.647 4C12.3039 4 13.647 5.34311 13.647 7ZM10.647 18.5C12.431 18.5 14.0867 17.9504 15.4539 17.0112C16.0578 16.5964 16.3158 15.8062 15.9647 15.1632C15.2369 13.8303 13.7372 13 10.6469 13C7.55667 13 6.05692 13.8302 5.32912 15.1632C4.97801 15.8062 5.23609 16.5963 5.83991 17.0111C7.20718 17.9503 8.86287 18.5 10.647 18.5Z"
@@ -731,6 +731,114 @@
       </div>
     </div>
 
+    <!-- modal login -->
+    <section class="content-login">
+      <div class="login">
+          <div class="login__figure">
+              <img class="login__img" src="/Assets/img/backgroundNovedades.webp" alt="">
+              <div class="login__content-close" id="closeLogin">
+                  <img src="/Assets/Icons/CloseMenu.svg" alt="">
+              </div>
+          </div>
+       
+          <div class="login__content">
+              <div class="login__images">
+                  <img class="login__logo" src="/Assets/Icons/cantonada_logo_02.svg" alt="">
+                  <img class="login__iconFood" src="/Assets/Icons/iconFoodInformation.svg" alt="">
+              </div>
+            
+              <form class="login__form">
+                  <div>
+                      <h1 class="login__title">Inicia Sesíon</h1>
+                      <p class="login__paragraph">Inicia sesión y déjate sorprender por una experiencia nikkei hecha a tu medida</p>
+                      
+                  </div>
+                
+                
+                  <label for="login__input" class="login__content-input">
+                      <input class="login__input" type="email" placeholder=" ">
+                       <span class="login__span-input">Correo Electrónico</span>
+                  </label>
+                 
+                  <label for="login__input" class="login__content-input">
+                      <input class="login__input" type="text" placeholder=" ">
+                      <span class="login__span-input">Contraseña</span>
+                  </label>
+                
+                  <div class="login__restore">
+                      <label for="" class="login__remember">                   
+                          <input class="login__remember-check" type="checkbox" id="check-remember" />
+                              <!-- <span class="login__chek"></span> -->
+                              <span class="login__remember-checkText">Recuérdame</span>
+                      </label>
+                      <a href="#"  class="login__restore-link">¿Olvidaste tu contraseña?</a>
+                  </div>
+                 
+                  <button class="login__btn">Iniciar Session</button>
+                  <div class="login__register-content" >
+                      <p>¿Aún no tienes cuenta? <a href="">Registrate</a></p>
+                  </div>
+  
+              </form>
+          </div>
+      </div>
+  </section>
+
+  <!-- modal shop -->
+   <section class="shop">
+    <div class="shop__content">
+      <img class="shop__background" src="/Assets/img/img2popular.png" alt="">
+      <div  >
+
+        <figure class="shop__figure">
+          <img src="/Assets/img/backgroundNovedades.webp" alt="">
+        </figure>
+        <div class="shop__content-all">
+
+       
+        <div class="shop__content-texts">
+          <h2 class="shop__title">Chicken Roll</h2>
+          <p class="shop__paragraph">Relleno de pollo queso crema y palta cubierto de sésamo</p>
+          <p class="shop__text-cant">Cantidad de Rolls:
+            <span class="shop__cant">10</span></p>
+        </div>
+        <div class="shop__content-price">
+          <span class="shop__price">S/ 24</span>
+          <div class="shop__price-icons">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 0C16.6312 0 17.1429 0.51168 17.1429 1.14286V2.28571H22.8571V9.14286H20.5497L23.6881 17.7655C23.8895 18.2809 24 18.8418 24 19.4286C24 21.9533 21.9533 24 19.4286 24C17.2985 24 15.5087 22.5431 15.0011 20.5714H10.1417C9.63417 22.5431 7.84439 24 5.71429 24C3.49201 24 1.64009 22.4143 1.22827 20.3127C0.49824 19.931 0 19.1665 0 18.2857V6.85714C0 6.22597 0.51168 5.71429 1.14286 5.71429H9.14286C9.77406 5.71429 10.2857 6.22597 10.2857 6.85714V12.5714C10.2857 13.2026 10.7974 13.7143 11.4286 13.7143H13.7143C14.3455 13.7143 14.8571 13.2026 14.8571 12.5714V2.28571H11.4286V0H16ZM19.4286 17.1429C18.1662 17.1429 17.1429 18.1662 17.1429 19.4286C17.1429 20.691 18.1662 21.7143 19.4286 21.7143C20.691 21.7143 21.7143 20.691 21.7143 19.4286C21.7143 19.1539 21.6658 18.8905 21.577 18.6466L21.5583 18.597C21.2257 17.7458 20.3976 17.1429 19.4286 17.1429ZM5.71429 17.1429C4.45192 17.1429 3.42857 18.1662 3.42857 19.4286C3.42857 20.691 4.45192 21.7143 5.71429 21.7143C6.97665 21.7143 8 20.691 8 19.4286C8 18.1662 6.97665 17.1429 5.71429 17.1429ZM8 8H2.28571V10.2857H8V8ZM20.5714 4.57143H17.1429V6.85714H20.5714V4.57143Z" fill="#C0C0C0"/>
+              </svg>
+              <svg width="20" height="24" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.81609 5.2381C5.81609 3.50235 7.11802 2.09524 8.72414 2.09524C10.3303 2.09524 11.6322 3.50235 11.6322 5.2381H5.81609ZM3.87739 5.2381H0.969349C0.433997 5.2381 0 5.70714 0 6.28571V20.9524C0 21.531 0.433997 22 0.969349 22H16.4789C17.0143 22 17.4483 21.531 17.4483 20.9524V6.28571C17.4483 5.70714 17.0143 5.2381 16.4789 5.2381H13.5709C13.5709 2.34518 11.4009 0 8.72414 0C6.04736 0 3.87739 2.34518 3.87739 5.2381ZM5.81609 9.42857C5.81609 11.1644 7.11802 12.5714 8.72414 12.5714C10.3303 12.5714 11.6322 11.1644 11.6322 9.42857H13.5709C13.5709 12.3215 11.4009 14.6667 8.72414 14.6667C6.04736 14.6667 3.87739 12.3215 3.87739 9.42857H5.81609Z" fill="#2473A6"/>
+                </svg>
+                <svg width="32" height="26" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.13286 0H21.8671C22.206 2.296 24.2185 4 26.5909 4C27.0439 4 27.4945 3.93695 27.9293 3.81275C27.678 6.19181 25.6279 8 23.1818 8H6.81818C4.37212 8 2.322 6.19181 2.07071 3.81276C2.50549 3.93695 2.95613 4 3.40909 4C5.78161 4 7.79393 2.296 8.13286 0ZM29.9708 10.8152C29.3757 11.1455 28.6876 11.334 27.9545 11.334C26.4404 11.334 25.1183 10.5296 24.4109 9.334H5.58907C4.88174 10.5296 3.55966 11.334 2.04545 11.334C1.31232 11.334 0.624246 11.1455 0.0291546 10.8152C0.00988642 10.9855 0 11.1587 0 11.334C0 13.1956 1.11481 14.8025 2.72727 15.5516V24H10.9091V21.3333C10.9091 19.1241 12.7407 17.3333 15 17.3333C17.2594 17.3333 19.0909 19.1241 19.0909 21.3333V24H27.2727V15.5516C28.8852 14.8025 30 13.1956 30 11.334C30 11.1587 29.99 10.9855 29.9708 10.8152Z" fill="#2473A6"/>
+                  </svg>
+                  
+          </div>
+        </div>
+        <div class="shop__content-btn">
+          <svg width="10" height="1" viewBox="0 0 10 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 0.5H9.00505" stroke="#2473A6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+          <span>200</span>
+          <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.994934 4.49878H8.99998" stroke="#2473A6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.99689 8.49683L4.99689 0.503148" stroke="#2473A6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+        </div>
+      </div>
+      <button class="shop__btnAdd">
+        <img class="shop__btnAdd-img" src="/Assets/Icons/btnmodalshop.svg" alt="">
+          <span class="shop__btnAdd-text">Agregar</span>
+          <span class="shop__btnAdd-precio">24</span>
+      </button>
+      </div>
+
+    </div>
+   </section>
 
   <footer class="footer">
     <div class="footer__container">
@@ -977,7 +1085,21 @@
       modalEntrega.classList.toggle('close')
       body.style.overflowY="scroll"
     })
-   
+  //  login
+    const logginOpen=document.querySelector('#loggin');
+    const contentLogin=document.querySelector('.content-login')
+    const closeModalLogin=document.querySelector('#closeLogin')
+    logginOpen.addEventListener('click',()=>{
+      contentLogin.classList.toggle('active')
+       
+  const body = document.body;
+      body.style.overflow="hidden";
+      
+    })
+    closeModalLogin.addEventListener('click',()=>{
+      contentLogin.classList.remove('active')
+       body.style.overflowY="scroll"
+    })
   </script>
 </body>
 

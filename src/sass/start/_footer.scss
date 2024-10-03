@@ -5,6 +5,7 @@
     position: relative;
     background: linear-gradient(180deg, #000 76%, rgba(0, 0, 0, 0.3) 100%);
     overflow: hidden;
+    padding: 9rem 0 2rem 0;
     @include m.tablet {
         height: auto;
     }
@@ -30,7 +31,7 @@
         background: linear-gradient(90deg, #000 70%, rgba(0, 0, 0, 0.3) 100%) ,url(/Assets/img/backgroundNovedades.webp);
     }
    }
-    padding: 9rem 0 2rem 0;
+   
     &__container{
         width: 92%;
         position: relative;
