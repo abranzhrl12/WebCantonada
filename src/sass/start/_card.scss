@@ -96,6 +96,7 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        transition: transform .3s;
         &::after{
             content: "AGREGAR";
             position: absolute;
@@ -104,6 +105,9 @@
             font-size: 1.2rem;
             letter-spacing: .1rem;
             font-family: var(--font-dela-gothic);
+        }
+        &:hover{
+            transform: scale(1.02);
         }
     }
 

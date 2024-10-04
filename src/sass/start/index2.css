@@ -894,6 +894,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 .card__btn::after {
   content: "AGREGAR";
@@ -903,6 +904,9 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   font-family: var(--font-dela-gothic);
+}
+.card__btn:hover {
+  transform: scale(1.02);
 }
 .card__arrow-next {
   position: absolute;

@@ -788,10 +788,14 @@
    <section class="shop">
     <div class="shop__content">
       <img class="shop__background" src="/Assets/img/img2popular.png" alt="">
+      
       <div  >
 
         <figure class="shop__figure">
           <img src="/Assets/img/backgroundNovedades.webp" alt="">
+          <div class="shop__figure-close" id="closeShopModal">
+            <img src="Assets/Icons/CloseMenu.svg" alt=""> 
+          </div>
         </figure>
         <div class="shop__content-all">
 
@@ -832,8 +836,11 @@
       </div>
       <button class="shop__btnAdd">
         <img class="shop__btnAdd-img" src="/Assets/Icons/btnmodalshop.svg" alt="">
-          <span class="shop__btnAdd-text">Agregar</span>
-          <span class="shop__btnAdd-precio">24</span>
+        <div class="shop__btnAdd-texts">
+          <span class="shop__btnAdd-text">AGREGAR</span>
+          <span class="shop__btnAdd-precio">S/ 48</span>
+        </div>
+       
       </button>
       </div>
 
@@ -1100,6 +1107,33 @@
       contentLogin.classList.remove('active')
        body.style.overflowY="scroll"
     })
+
+   //cerrar modal de shop
+  // Selecciona todos los botones con la clase 'card__btn'
+const cardButtons = document.querySelectorAll('.card__btn');
+const closeShopModal = document.querySelector('#closeShopModal');
+const modalShop = document.querySelector('.shop');
+
+
+// Función para abrir el modal y desactivar el scroll del body
+function openModal() {
+    modalShop.classList.add('active');
+    body.style.overflowY = "hidden"; // Desactivar scroll
+}
+
+// Función para cerrar el modal y reactivar el scroll del body
+function closeModal() {
+    modalShop.classList.remove('active');
+    body.style.overflowY = "scroll"; // Reactivar scroll
+}
+
+// Añadir un evento de clic a cada botón para abrir el modal
+cardButtons.forEach(button => {
+    button.addEventListener('click', openModal);
+});
+
+// Evento para cerrar el modal
+closeShopModal.addEventListener('click', closeModal);
   </script>
 </body>
 
